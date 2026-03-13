@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { SessionProvider } from "next-auth/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SpotyShare — Community Playlists",
+  title: "SpotyShare — Personal Playlist Manager",
   description:
-    "Create collaborative Spotify playlists. Add songs, vote, and let the community curate the best music.",
+    "Manage your Spotify playlists with community voting. Create playlists, let others vote, and sync the best tracks automatically.",
   openGraph: {
-    title: "SpotyShare — Community Playlists",
+    title: "SpotyShare — Personal Playlist Manager",
     description:
-      "Create collaborative Spotify playlists. Add songs, vote, and let the community curate the best music.",
+      "Manage your Spotify playlists with community voting. Create playlists, let others vote, and sync the best tracks automatically.",
     type: "website",
   },
 };
@@ -26,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased`}>
+        <SessionProvider>{children}</SessionProvider>
+      </body>
     </html>
   );
 }
