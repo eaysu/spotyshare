@@ -8,7 +8,7 @@ export function Footer() {
   const { data: session } = useSession();
 
   return (
-    <footer className="border-t border-border/40 bg-background/50">
+    <footer className="border-t border-white/[0.06] bg-black/30 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 px-4 py-8 text-center sm:flex-row sm:justify-between sm:text-left">
         <div className="flex items-center gap-2">
           <div className="flex h-6 w-6 items-center justify-center rounded bg-primary">

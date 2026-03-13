@@ -14,7 +14,7 @@ interface SongCardProps {
 
 export function SongCard({ song, rank, onVote }: SongCardProps) {
   return (
-    <div className="group flex items-center gap-4 rounded-xl bg-card/60 p-3 transition-colors hover:bg-card">
+    <div className="group flex items-center gap-4 rounded-xl border border-white/[0.06] bg-white/[0.04] p-3 backdrop-blur-md transition-all hover:border-white/[0.12] hover:bg-white/[0.08] hover:shadow-lg hover:shadow-black/20">
       <span className="w-6 text-center text-sm font-bold text-muted-foreground">
         {rank}
       </span>
